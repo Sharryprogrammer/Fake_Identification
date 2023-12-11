@@ -16,7 +16,7 @@ function Home() {
           <div className='Home__instructions'>
             <ul>
               <li>To create a smart contract for your organization visit:  <Link className='Home__link' to="createcontract">Create Contract page</Link></li>
-              <li>To fetch smart contract address linked to a wallet address visit: <Link className='Home__link' to="getcontract">Fetch Address page</Link></li>
+              {/* <li>To fetch smart contract address linked to a wallet address visit: <Link className='Home__link' to="getcontract">Fetch Address page</Link></li> */}
               <li>To add products to your smart contract visit:  <Link className='Home__link' to="addproduct">Add Products page</Link></li>
               <li>To verify the authenticity of a product visit: <Link className='Home__link' to="verify">Verify Product page</Link></li>
             </ul>

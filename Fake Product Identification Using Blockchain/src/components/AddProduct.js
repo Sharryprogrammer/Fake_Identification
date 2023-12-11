@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import './app.css';
+import CryptoJS from 'crypto-js';
 
 const AddProduct = ({account, central}) => {
 
@@ -55,7 +56,9 @@ const AddProduct = ({account, central}) => {
           setUrl("");
         };
         const qrCodeEncoder = (e) => {
-          setUrl(e.target.value);
+            let a = companyContractAddress+"?"+productId+'1'
+            
+          setUrl(CryptoJS.AES.encrypt(a, "key").toString());
         };
       
         const qrcode = (
@@ -72,12 +75,17 @@ const AddProduct = ({account, central}) => {
     const addProducts = async () => {
         try{
             const list = JSON.parse("[" + productId + "]");
+            // console.log(account);
+            // console.log(companyContractAddress);
+            // console.log(list);
             if(account && companyContractAddress && list){
                 setUpdateStatus("Validate the transaction through your wallet");
                 let transaction = await central.addproduct(account, companyContractAddress, list);
+                console.log(transaction);
                 setLoading(true);
                 await transaction.wait();
                 setUpdateStatus("Products Added");
+                qrCodeEncoder();
                 setLoading(false);
             }else{
                 throw Error('Please check that you are connected to a wallet,and that you have provided all the fields');
@@ -137,13 +145,13 @@ const AddProduct = ({account, central}) => {
             <div ref={qrRef}>{qrcode}</div>
             <div className="input__group">
                 <form onSubmit={downloadQRCode}>
-                <label>Enter Address</label>
-                <input
+                {/* <label>Enter Address</label> */}
+                {/* <input
                     type="text"
                     value={value}
                     onChange={qrCodeEncoder}
                     placeholder="Address of Company"
-                />
+                /> */}
                 <button type="submit" disabled={!value}>
                     Download QR code
                 </button>

@@ -35,9 +35,9 @@ const Navigation = ({ account, setAccount }) => {
                     <li className='nav__item'>
                         <Link className='nav__link' to="createcontract">CreateContract</Link>
                     </li>
-                    <li className='nav__item'>
+                    {/* <li className='nav__item'>
                         <Link className='nav__link' to="getcontract">FetchAddress</Link>
-                    </li>
+                    </li> */}
                     <li className='nav__item'>
                         <Link className='nav__link' to="addproduct">AddProducts</Link>
                     </li>

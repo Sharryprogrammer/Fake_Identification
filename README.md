@@ -1,7 +1,5 @@
 # Product Identification Using Blockchain
 
-#### View Live at : https://authenticate-product-web3-2723.netlify.app/
-
 ### Technologies & Frameworks :
 [![Solidity](https://img.shields.io/badge/solidity-black?style=for-the-badge&logo=solidity)](https://github.com/SURAJPATIL6088)
 [![React.js](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react)](https://github.com/SURAJPATIL6088)
@@ -45,8 +43,8 @@ Nowadays, small and medium-sized enterprises (SMEs) often have financial burdens
 
 ## Contributors : 
 
-| Project Guide  | Group Leader | Group Member 2 |  Group Member 3 | Group Member 4 |
-| -------------  | ------------ | -------------- | --------------- | -------------- |
-| Ms.Abira Banik | Suraj Patil  | Matlup Ali Mir |  Varad Patil    | Atharva Pimple |
+| Project Guide       | Group Leader     | Group Member 2 |  Group Member 3     | Group Member 4   |
+| ------------------  | ---------------- | -------------- | ------------------- | ---------------- |
+| Rr.Vishal Badgughar | Sharanya Bajpai  | Udit Kansal    |  Shashwat Dwivedi   | Saumya Chaudhary |
 
 

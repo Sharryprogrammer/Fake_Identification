@@ -36,13 +36,19 @@ function App() {
 
   const loadBlockchainData = async () => {
     try{
+      await window.ethereum.enable()
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = await provider.getSigner();
+      // console.log(provider);
       setProvider(provider);
       const network = await provider.getNetwork();
+      // console.log(network);
+      console.log("accha");
+      console.log( config[5]);
+      const central = new ethers.Contract(config[5].central.address, CentralABI, signer);
 
-      const central = new ethers.Contract(config[network.chainId].central.address, CentralABI, signer);
       setCentral(central);
+
     }catch(error){
       console.log(error);
       showErrorMessage(error);
@@ -52,7 +58,7 @@ function App() {
 
   useEffect(() => {
     loadBlockchainData()
-  },)
+  },[])
 
   return (
     <Router>
@@ -64,10 +70,10 @@ function App() {
           path="/createcontract" 
           element = {<DeployContract  account={account} provider={provider} central={central} />}
         />
-        <Route 
+        {/* <Route 
           path="/getcontract" 
           element = {<GetContract  account={account} provider={provider} central={central} />}
-        />
+        /> */}
         <Route 
           path="/addproduct"  
           element = {<AddProduct account={account} provider={provider} central={central} />}
