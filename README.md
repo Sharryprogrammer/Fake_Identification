@@ -45,6 +45,6 @@ Nowadays, small and medium-sized enterprises (SMEs) often have financial burdens
 
 | Project Guide       | Group Leader     | Group Member 2 |  Group Member 3     | Group Member 4   |
 | ------------------  | ---------------- | -------------- | ------------------- | ---------------- |
-| Rr.Vishal Badgughar | Sharanya Bajpai  | Udit Kansal    |  Shashwat Dwivedi   | Saumya Chaudhary |
+| Mr.Vishal Badgughar | Sharanya Bajpai  | Udit Kansal    |  Shashwat Dwivedi   | Saumya Chaudhary |
 
 
