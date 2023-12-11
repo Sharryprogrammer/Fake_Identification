@@ -1,9 +1,10 @@
 ## 🤔 Getting Started :
 
 1. Make Sure you are in the Main folder : 
-
 <br>
+
 1. Install the Node_Modules
+
 ```
 npm install
 ```
